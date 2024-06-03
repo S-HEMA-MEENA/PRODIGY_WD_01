@@ -1,0 +1,442 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+
+:root{
+    --black: #1B1722;
+    --white : #F0F0F0;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;   
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+    border-radius: 5rem;
+}
+
+.header{
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color:rgba(89, 239, 239, 0.541);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0%;
+    z-index: 999;
+}
+
+.header .logocontent{
+    display: flex;
+    align-items: center;
+}
+
+.header .logocontent .logo img{
+    height: 8rem;
+}
+
+.header .logocontent .logoname {
+    color: red;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: Cambria;
+    
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color:rgb(121, 7, 121);
+    font-weight: bold;
+}
+
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+
+.header .icon i{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color:rgb(121, 7, 121);
+    cursor: pointer;
+}
+
+
+.header .search{
+    display: none;
+    top: 100%;
+    margin: 1rem;
+    background-color: transparent;
+    width: 50%;
+    right: 0;
+    height: 5rem;
+    position:  absolute;
+
+}
+
+.header .search input{
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    background-color: var(--white);
+    color: var(--black);
+    margin-right: 7%;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search.active{
+    display: inline-block;
+}
+
+#menu-bar{
+    display: none;
+}
+
+/* Custom styles for carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 75px; /* Adjust the width as needed */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Set the icon color to black */
+    width: 30px; /* Adjust the icon width as needed */
+    height: 30px; /* Adjust the icon height as needed */
+    background-size: 100%, 100%; /* Ensure the icon fills the area */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.heading{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+/* General styles for the product section */
+.product .heading h1{
+    text-align: center;
+    margin-top: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.product .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.product .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    background-color: var(--white);
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    width: calc(25% - 2rem); /* Four boxes per row by default */
+    box-sizing: border-box;
+}
+
+.product .img img {
+    width: 100%; /* Ensure all images have the same width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s;
+    object-fit: cover; /* Prevent distortion by covering container */
+}
+
+.product .img img:hover {
+    transform: scale(1.1);
+}
+
+.product .content h3 {
+    font-size: 2rem; /* Adjusted to make it larger */
+    color: var(--black);
+}
+
+.product .content .order {
+    margin-top: 1.5rem; /* Increased margin for better separation */
+}
+
+.product .content .order button {
+    font-size: 1.6rem; /* Adjusted to make it larger */
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 0.7rem;
+    padding: 1rem 2.5rem; /* Adjusted padding for better button appearance */
+    cursor: pointer;
+}
+
+.product .content .order button:hover {
+    font-size: 1.8rem; /* Adjusted size on hover */
+}
+
+.review {
+    background-color: #F0F8FF; 
+  }
+.review .review-row{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    
+}
+.review .review-row .review-box{
+    width: 100%; 
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border-radius: 3rem;
+    background-color:pink;
+    box-shadow: var(--box-shadow);
+}
+
+.review .review-row .review-box .client-review{
+    margin-bottom: 3rem;
+}
+.review .review-row .review-box .client-review p{
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.review .review-row .review-box .client-info{
+    display: flex;
+    align-items: center;
+}
+.review .review-row .review-box .client-info .img{
+    padding-right: 3rem;
+}
+.review .review-row .review-box .client-info .img img{
+    width: 7rem;
+    height: 7rem;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.review .review-row .review-box .client-info .name h3{
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+
+}
+.review .review-row .review-box .client-info .name p{
+    font-size:1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.swiper-container {
+    width: 4rem; 
+    height: 4rem; 
+  }
+
+  .footer {
+    background: url(images/bg.jpg) ;
+    background-size: cover;
+    background-position: center center;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+.footer .box-container .mainBox .content img{
+    width: 150px;
+    height:150px;
+    clip-path: circle(50% at 50% 50%);
+}
+.footer .box-container .mainBox .content h1{
+    margin: 3%;
+    color: yellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--black);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+    padding: 1rem 0;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: orange;
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+.footer .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--black);
+    margin: 0 .3rem;
+    border-radius: 50%;
+
+}
+.footer .share a:hover{
+    background: var(--white);
+    color: var(--black);
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1199px) {
+    .product .content h3 {
+        font-size: 1.8rem; /* Adjusted size for medium screens */
+    }
+
+    .product .content .order button {
+        font-size: 1.4rem; /* Adjusted size for medium screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .product .content h3 {
+        font-size: 1.6rem; /* Adjusted size for small screens */
+    }
+
+    .product .content .order button {
+        font-size: 1.2rem; /* Adjusted size for small screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .product .box {
+        width: calc(100% - 2rem); /* One box per row */
+    }
+
+    .product .content h3 {
+        font-size: 1.4rem; /* Adjusted size for extra small screens */
+    }
+
+    .product .content .order button {
+        font-size: 1rem; /* Adjusted size for extra small screens */
+    }
+}
+
+
+/* media queries for web responsive */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Custom media queries to handle responsiveness */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.3rem 3rem;
+    }
+    .home .homeContent {
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bar {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 15rem;
+        background-color: var(--white);
+        height: 40vh;
+    }
+    .header .navbar.active {
+        right: 0;
+    }
+    .header .navbar a {
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+}
+
+@media (max-width: 100px) {
+    html {
+        font-size: 50%;
+    }
+    .header .logo img {
+        width: 50px;
+    }
+    .header .logoname {
+        font-size: 1.5rem;
+    }
+    .home .carousel-item {
+        height: 400px;
+    }
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+/* Ensure no overflow issues */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.home {
+    width: 100%;
+}
